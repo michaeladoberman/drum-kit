@@ -1,3 +1,49 @@
 body {
-  background: grey;
+
+   background:
+    /* top, transparent red, faked with gradient */
+    linear-gradient(
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url('img.jpg');
+    background-size: cover;
 }
+
+.drums {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .drum-key {
+    width: 200px;
+    height: 200px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    background-color: #fff;
+    border: solid 7px #c62201;
+    margin: 40px 150px;
+    transition: all 0.08s;
+
+    kbd {
+      font-size: 2rem;
+    }
+  }
+
+  .playing {
+    transform: scale(1.2);
+    border-color: #ffc266;
+  }
+
+  .row-one, .row-two, .row-three {
+    display: flex;
+    flex-direction: row;
+  }
+
+}
+
+
